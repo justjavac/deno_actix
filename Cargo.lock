@@ -473,6 +473,7 @@ dependencies = [
  "actix-rt",
  "actix-web",
  "deno_core",
+ "futures",
 ]
 
 [[package]]

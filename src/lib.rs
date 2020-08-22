@@ -4,7 +4,6 @@ extern crate futures;
 
 use actix_web::{web, App, HttpResponse, HttpServer, Responder};
 use deno_core::plugin_api::{Buf, Interface, Op, ZeroCopyBuf};
-use futures::future::FutureExt;
 
 #[no_mangle]
 pub fn deno_plugin_init(interface: &mut dyn Interface) {
@@ -16,7 +15,7 @@ fn op_run(
   _zero_copy: &mut [ZeroCopyBuf],
 ) -> Op {
   main();
-  let result: Buf = None;
+  let result: Buf = Box::new([]);
   Op::Sync(result)
 }
 
