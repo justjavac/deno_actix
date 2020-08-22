@@ -1,6 +1,6 @@
 [package]
-name = "deno_num_cpus"
-version = "0.1.5"
+name = "deno_actix"
+version = "0.1.0"
 authors = ["迷渡 <justjavac@gmail.com>"]
 edition = "2018"
 

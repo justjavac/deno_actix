@@ -97,12 +97,12 @@ jobs:
 
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: github.repository == 'justjavac/deno_num_cpus' && startsWith(github.ref, 'refs/tags/')
+        if: github.repository == 'justjavac/deno_actix' && startsWith(github.ref, 'refs/tags/')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           files: |
-            target/release/libdeno_num_cpus.dylib
-            target/release/libdeno_num_cpus.so
-            target/release/deno_num_cpus.dll
+            target/release/libdeno_actix.dylib
+            target/release/libdeno_actix.so
+            target/release/deno_actix.dll
           draft: true
